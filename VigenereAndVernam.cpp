@@ -16,7 +16,6 @@ int main()
    bool oneTimePad;
    string Vernam="";
    char v;
-   //cout<<Diff<<endl;
    string a,b,letter;
    string letters[]={"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"};
    if(key.length()<plainText.length())
@@ -35,7 +34,6 @@ int main()
    {
     oneTimePad=true;
    }
-   //cout<<"key= "<<key<<endl;
    for(int i=0;i<plainText.length();i++)
    {
        for(int j=0;j<26;j++)
@@ -62,25 +60,13 @@ int main()
    printf("Vernam: ");
      for(int i=0;i<plainText.size();i++)
    {
-       /*aa=0,bb=0;
-       aa=aa+plainText[i];
-       cout<<"aa= "<<aa<<endl;
-       bb=bb+key[i];
-       cout<<"bb= "<<bb<<endl;
-       Vernam=aa^bb;
-       cout<<"Vernam: "<<Vernam<<endl;*/
        v=(char)(plainText[i]^key[i]);
-     //  printf("0x%X    0x%X=   ",plainText[i],key[i]);
-     //  printf("0x%X \n",v);
-      // Vernam=Vernam+v;
-     printf("%02X",v);
+       printf("%02X",v);
    }
    cout<<endl;
-  // printf("Vernam: 0x%X",Vernam);
+   
   if(oneTimePad==true)
     cout<<"One-Time Pad: YES"<<endl;
   else if(oneTimePad==false)
     cout<<"One-Time Pad: NO"<<endl;
-
-
 }
